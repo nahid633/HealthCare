@@ -1,6 +1,6 @@
 # HealthCare
 This project was generated with Spring MVC.JPA (Hibernate)
-#TASK
+## TASK
 backend & database ucun :
 15 muxtelif obyekin muxtelif 1-10 bolmeleri var. 
 Bu obyeklerin  bölmeleri arasinda eyni olanlari ve ferqli olanlari da var. 
@@ -8,7 +8,7 @@ Axtaris verilen zaman, (her hansi bir obyekt ve ya bolmesi):
 obyekt axtarisi: bolmeleri;
 bolmeleri axtarisi : hansi  oytektin daxilinde ise onlarda gosterilir
 
-#Before Build
+## Before Build
 Import AHC.sql () file in MYSQL database.If you are using other database.Just change 
 `hibernate.hbm2ddl.auto=update` to `create-drop` 
 and Also configure application properties for your machine.
@@ -24,6 +24,8 @@ mvn clean;
 mvn compile;
 mvn install;
 
+## RUN 
+Place War file inside Tomcat or whatever server you are using.
 
 ## Further help
 
