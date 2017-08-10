@@ -1,14 +1,12 @@
 package az.ahc.model;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * Created by Nahid
  */
+/**Annotation defines the Department class as an entity
+ * */
 @Entity
 @Table(name="departments")
 public class Department  {
@@ -30,7 +28,7 @@ public class Department  {
     @JoinColumn(name = "hosp_id")
     private Hospital hospital;
     /**
-     * Getter and Setters
+     * Getters and Setters
      */
     public int getDept_id() {
         return dept_id;

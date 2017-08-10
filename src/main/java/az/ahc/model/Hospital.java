@@ -1,15 +1,14 @@
 package az.ahc.model;
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 /**
  * Created by Nahid
  */
+/**Annotation defines the Hospital class as an entity
+ * */
 @Entity
 @Table(name = "hospitals")
-public class Hospital implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class Hospital{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "hospital_id", unique = true, nullable = false)
@@ -22,18 +21,14 @@ public class Hospital implements Serializable {
     private String hospital_tel;
     @Column(name = "hospital_index", nullable = true)
     private String hospital_index;
-
-//    public List<Department> getDepartment() {
-//        return department;
-//    }
-//
-//    public void setDepartment(List<Department> department) {
-//        this.department = department;
-//    }
+    /**
+     * It allows you to map the Foreign Key column
+     * in the child entity mapping so that the child has an entity object reference to its parent entity.
+     */
     @OneToMany(mappedBy = "hospital",cascade=CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Department> department;
     /**
-     * Getter and Setters
+     * Getters and Setters
      */
     public int getId() {
         return id;

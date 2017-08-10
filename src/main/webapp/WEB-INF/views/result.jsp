@@ -5,7 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-
 <table class="table table-striped">
     <thead>
     <th>Hospital Name </th>
@@ -14,7 +13,6 @@
     <th>Index </th>
     <th>Department </th>
     </thead>
-    ${noResult}
 <c:forEach items="${result}" var="r">
     <tr>
         <td>${r.hospital.hospital_name}</td>
@@ -25,5 +23,6 @@
     </tr>
     </c:forEach>
 </table>
+${noResult}
 </body>
 </html>

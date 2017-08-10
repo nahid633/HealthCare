@@ -4,7 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-sadasdas
+<%--Redirect to home use can find it in controller--%>
 <% response.sendRedirect("/home"); %>
 </body>
 </html>
